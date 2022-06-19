@@ -6,30 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Table</title>
-    <link rel="stylesheet" href="./style.css">
     <style>
         * {
             font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        html,
         body {
-            height: 100%;
-        }
-
-        body {
-            margin: 0;
-            background: linear-gradient(45deg, #49a09d, #5f2c82);
-            /* font-family: sans-serif; */
-            /* font-weight: 100; */
-        }
-
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: max-content;
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+            --bg: #444655;
+            background-color: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
         }
 
         table {
@@ -37,6 +27,7 @@
             border-collapse: collapse;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: block;
         }
 
         th,
@@ -78,6 +69,39 @@
             bottom: -9999px;
             background-color: rgba(255, 255, 255, 0.2);
             z-index: -1;
+        }
+
+        @media only screen and (max-width: 1200px) {
+
+            body {
+                display: initial;
+            }
+            
+            table {
+                margin: 10px;
+                border-collapse: initial;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                display: block;
+                overflow: auto;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            tbody tr:hover {
+                background-color: initial;
+            }
+
+            tbody td {
+                position: initial;
+            }
+
+            tbody td:hover::before {
+                content: initial;
+                position: initial;
+                background-color: rgba(255, 255, 255, 0.2);
+                z-index: initial;
+                display: initial;
+            }
         }
     </style>
 </head>
