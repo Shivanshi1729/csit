@@ -76,7 +76,7 @@
             body {
                 display: initial;
             }
-            
+
             table {
                 margin: 10px;
                 border-collapse: initial;
@@ -102,6 +102,33 @@
                 z-index: initial;
                 display: initial;
             }
+
+            .day {
+                position: absolute;
+                width: 1.5em;
+                left: 0;
+                top: auto;
+            }
+
+            .container {
+                margin-left: 1.6em;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 15px;
+            height: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(45deg, #00aeff, #a68eff);
+            border-radius: 10px;
+            -webkit-box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
         }
     </style>
 </head>
@@ -111,7 +138,7 @@
         <table>
             <thead>
                 <tr>
-                    <th></th>
+                    <th class="day"> &nbsp;</th>
                     <th>9:00 - 9:55</th>
                     <th>9:55 - 10:50</th>
                     <th>11:10 - 12:05</th>
