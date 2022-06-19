@@ -15,8 +15,7 @@
             width: 100vw;
             height: 100vh;
             margin: 0px;
-            --bg: #444655;
-            background-color: var(--bg);
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -28,6 +27,7 @@
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             display: block;
+            border-radius: 10px;
         }
 
         th,
@@ -75,6 +75,8 @@
 
             body {
                 display: initial;
+                background-color: #444655;
+                background-image: initial;
             }
 
             table {
@@ -105,19 +107,19 @@
 
             .day {
                 position: absolute;
-                width: 1.5em;
-                left: 0;
+                width: 25px;
+                left: 10px;
                 top: auto;
             }
 
             .container {
-                margin-left: 1.6em;
+                margin-left: 50px;
             }
         }
 
         ::-webkit-scrollbar {
-            width: 15px;
-            height: 15px;
+            width: 5px;
+            height: 5px;
         }
 
         ::-webkit-scrollbar-track {
